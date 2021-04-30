@@ -9,24 +9,36 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-const { wrap } = require('@adobe/helix-shared');
+const wrap = require('@adobe/helix-shared-wrap');
+const { optionalConfig } = require('@adobe/helix-shared-config');
 const { logger } = require('@adobe/helix-universal-logger');
 const { wrap: status } = require('@adobe/helix-status');
 const { Response } = require('@adobe/helix-universal');
 
 /**
- * This is the main function
+ * A small function that takes all available configurations and returns them as JSON.
  * @param {Request} request the request object (see fetch api)
  * @param {UniversalContext} context the context of the universal serverless function
  * @returns {Response} a response
  */
 function main(request, context) {
-  const name = new URL(request.url).searchParams.get('name') || 'world';
-  context.log.info(`Saying hello to: ${name}.`);
-  return new Response(`Hello, ${name}.`);
+  const aggregate = Object.keys(context.config).reduce((agg, name) => {
+    if (context.config[name] && typeof context.config[name].toJSON === 'function') {
+      // eslint-disable-next-line no-param-reassign
+      agg[name] = context.config[name].toJSON();
+    }
+    return agg;
+  }, {});
+
+  return new Response(JSON.stringify(aggregate), {
+    headers: {
+      'content-type': 'application/json',
+    },
+  });
 }
 
 module.exports.main = wrap(main)
   .with(status)
   .with(logger.trace)
-  .with(logger);
+  .with(logger)
+  .with(optionalConfig, 'redirect', 'fstab', 'markup', 'index');
