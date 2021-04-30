@@ -29,7 +29,7 @@ createTargets().forEach((target) => {
         .get(`${target.urlPath()}?owner=adobe&repo=theblog&ref=10c716c1ddaa8df482aea4220b36a4a578da5b2c`)
         .then((response) => {
           expect(response).to.have.status(200);
-          expect(response).to.have.header('content-type', 'application/json');
+          expect(response).to.be.json;
           expect(response.body).to.be.an('object');
           expect(response.body).to.deep.equal(config);
         }).catch((e) => {
