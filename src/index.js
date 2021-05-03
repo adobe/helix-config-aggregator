@@ -39,6 +39,6 @@ function main(request, context) {
 
 module.exports.main = wrap(main)
   .with(status)
+  .with(optionalConfig, 'redirect', 'fstab', 'markup', 'index')
   .with(logger.trace)
-  .with(logger)
-  .with(optionalConfig, 'redirect', 'fstab', 'markup', 'index');
+  .with(logger);
