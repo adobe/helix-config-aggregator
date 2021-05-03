@@ -1,6 +1,6 @@
 {
   "name": "@adobe/helix-config-aggregator",
-  "version": "1.4.9",
+  "version": "1.0.0",
   "private": true,
   "description": "Helix Configuration Aggregator",
   "main": "src/index.js",

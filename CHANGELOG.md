@@ -1,3 +1,10 @@
+# 1.0.0 (2021-05-03)
+
+
+### Features
+
+* first implementation ([80e0750](https://github.com/adobe/helix-config-aggregator/commit/80e0750e5b51eea8f9066fbb6f4ac9d0040e3f56))
+
 ## [2.0.17](https://github.com/adobe/helix-service/compare/v2.0.16...v2.0.17) (2021-04-29)
 
 
