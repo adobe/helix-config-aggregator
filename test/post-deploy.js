@@ -16,19 +16,22 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const { createTargets } = require('./post-deploy-utils.js');
+const config = require('./fixtures/blog-config.json');
 
 chai.use(chaiHttp);
 const { expect } = chai;
 
 createTargets().forEach((target) => {
   describe(`Post-Deploy Tests (${target.title()})`, () => {
-    it('Purge a blog post', async () => {
+    it('Load a config', async () => {
       await chai
         .request(target.host())
-        .get(target.urlPath())
+        .get(`${target.urlPath()}?owner=adobe&repo=theblog&ref=10c716c1ddaa8df482aea4220b36a4a578da5b2c`)
         .then((response) => {
           expect(response).to.have.status(200);
-          expect.fail('Not ready yet');
+          expect(response).to.be.json;
+          expect(response.body).to.be.an('object');
+          expect(response.body).to.deep.equal(config);
         }).catch((e) => {
           throw e;
         });
