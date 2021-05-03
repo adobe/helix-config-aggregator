@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/adobe/helix-config-aggregator/compare/v1.0.0...v1.0.1) (2021-05-03)
+
+
+### Bug Fixes
+
+* **deps:** update adobe fixes ([8e1fd7f](https://github.com/adobe/helix-config-aggregator/commit/8e1fd7f8437841136bea2d8b98be9add9fbea195))
+
 # 1.0.0 (2021-05-03)
 
 
