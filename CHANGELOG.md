@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/adobe/helix-config-aggregator/compare/v1.0.4...v1.0.5) (2021-05-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @adobe/helix-shared-config to v1.1.0 ([#20](https://github.com/adobe/helix-config-aggregator/issues/20)) ([5e1a4e0](https://github.com/adobe/helix-config-aggregator/commit/5e1a4e008a14996cdc07ff6741e15c6087945a2c))
+
 ## [1.0.4](https://github.com/adobe/helix-config-aggregator/compare/v1.0.3...v1.0.4) (2021-05-11)
 
 
