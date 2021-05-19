@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/adobe/helix-config-aggregator/compare/v1.0.6...v1.0.7) (2021-05-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @adobe/helix-status to v9.1.7 ([#27](https://github.com/adobe/helix-config-aggregator/issues/27)) ([5eafa53](https://github.com/adobe/helix-config-aggregator/commit/5eafa53f20e2ab2edf19477333da1d0eeaabb1b8))
+
 ## [1.0.6](https://github.com/adobe/helix-config-aggregator/compare/v1.0.5...v1.0.6) (2021-05-17)
 
 
