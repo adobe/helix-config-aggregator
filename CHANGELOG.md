@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/adobe/helix-config-aggregator/compare/v1.0.8...v1.0.9) (2021-05-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @adobe/helix-universal to v1.6.1 ([#34](https://github.com/adobe/helix-config-aggregator/issues/34)) ([52782fc](https://github.com/adobe/helix-config-aggregator/commit/52782fcc173dca3104ed79824ed6ed9c03893573))
+
 ## [1.0.8](https://github.com/adobe/helix-config-aggregator/compare/v1.0.7...v1.0.8) (2021-05-30)
 
 
